@@ -554,6 +554,9 @@
     <layoutAssignments>
         <layout>XML_to_sObject_Mapping__mdt-XML to sObject Mapping Layout</layout>
     </layoutAssignments>
+    <layoutAssignments>
+        <layout>BIN_Asset__c-BIN Asset Layout</layout>
+    </layoutAssignments>
     <objectPermissions>
         <allowCreate>false</allowCreate>
         <allowDelete>false</allowDelete>

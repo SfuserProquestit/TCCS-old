@@ -656,6 +656,21 @@
         <field>Case.CORE_Address__c</field>
         <readable>true</readable>
     </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>BIN_Asset__c.BIN_Colour__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>BIN_Asset__c.BIN_Core_Address__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>BIN_Asset__c.BIN_Size__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
     <layoutAssignments>
         <layout>Account-DAS_Business_Account_PL</layout>
     </layoutAssignments>
