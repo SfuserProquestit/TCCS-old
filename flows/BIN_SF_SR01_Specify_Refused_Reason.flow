@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <choices>
+        <name>RefusedReasonSpecified</name>
+        <choiceText>{!Enter_Refused_Reason}</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <elementReference>RefusedReason</elementReference>
+        </value>
+    </choices>
+    <description>TCCS BINS Card #12 - Prompting TCCS Customer Service Officer to specify Refused Reason when marking Service Request as &apos;Refused&apos;.</description>
+    <dynamicChoiceSets>
+        <description>Refused Reason Picklist</description>
+        <name>RefusedReason</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true" />
+        <object xsi:nil="true" />
+        <picklistField>Refused_Reason__c</picklistField>
+        <picklistObject>Case</picklistObject>
+    </dynamicChoiceSets>
+    <interviewLabel>BIN SF SR01 Specify Refused Reason {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>BIN SF SR01 Specify Refused Reason</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordUpdates>
+        <name>Update_Refused_Reason</name>
+        <label>Update Refused Reason</label>
+        <locationX>1050</locationX>
+        <locationY>60</locationY>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Refused_Reason__c</field>
+            <value>
+                <elementReference>RefusedReasonSpecified</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Refused</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+    </recordUpdates>
+    <screens>
+        <description>Specify Refused Reason</description>
+        <name>Specify_Refused_Reason</name>
+        <label>Specify Refused Reason</label>
+        <locationX>811</locationX>
+        <locationY>50</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Update_Refused_Reason</targetReference>
+        </connector>
+        <fields>
+            <name>Enter_Refused_Reason</name>
+            <choiceReferences>RefusedReason</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Specify Refused Reason</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <startElementReference>Specify_Refused_Reason</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>
