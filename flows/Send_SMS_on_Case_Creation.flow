@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <processMetadataValues>
+            <name>apexSelection</name>
+            <value>
+                <stringValue>Schedule Messages</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_1_A1</name>
+        <label>Send Message</label>
+        <locationX>100</locationX>
+        <locationY>200</locationY>
+        <actionName>LiveText__ScheduleMessageAction</actionName>
+        <actionType>apex</actionType>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Message</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>0.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>Message</name>
+            <value>
+                <elementReference>formula_2_myRule_1_A1_5061898094</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Object Id</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>0.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>ObjectId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Reference Id</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>0.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>ReferenceId</name>
+            <value>
+                <stringValue>NewCase</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>To</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>ToPhoneNumber</name>
+            <value>
+                <elementReference>formula_3_myRule_1_A1_9991316308</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>apexSelection</name>
+            <value>
+                <stringValue>Schedule Messages</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_5_A1</name>
+        <label>Send Message</label>
+        <locationX>500</locationX>
+        <locationY>200</locationY>
+        <actionName>LiveText__ScheduleMessageAction</actionName>
+        <actionType>apex</actionType>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Object Id</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>0.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>ObjectId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Message</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>0.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>Message</name>
+            <value>
+                <elementReference>formula_6_myRule_5_A1_2068322063</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Reference Id</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>0.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>ReferenceId</name>
+            <value>
+                <stringValue>Travelling</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>To</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>ToPhoneNumber</name>
+            <value>
+                <elementReference>formula_7_myRule_5_A1_5081645124</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision</name>
+        <label>myDecision</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision4</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_1</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_1_A1</targetReference>
+            </connector>
+            <label>Priority 1 case created</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision4</name>
+        <label>myDecision4</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_5</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_5</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_5_A1</targetReference>
+            </connector>
+            <label>Priority 1 Case Ranger Travelling</label>
+        </rules>
+    </decisions>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>&quot;Hi &quot; &amp; [Case].Caller_First_Name__c &amp; &quot;, Thanks for your call to Domestic Animal Services. &quot; &amp; &quot;Case Number &quot; &amp; [Case].CaseNumber &amp; &quot; has been created for your reference.&quot;</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_2_myRule_1_A1_5061898094</name>
+        <dataType>String</dataType>
+        <expression>&quot;Hi &quot; &amp; {!myVariable_current.Caller_First_Name__c} &amp; &quot;, Thanks for your call to Domestic Animal Services. &quot; &amp; &quot;Case Number &quot; &amp; {!myVariable_current.CaseNumber} &amp; &quot; has been created for your reference.&quot;</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>IF(BEGINS([Case].Caller_Primary_Phone__c, &quot;+614&quot;) , [Case].Caller_Primary_Phone__c,
+ IF(BEGINS([Case].Caller_Primary_Phone__c, &quot;614&quot;) , &quot;+&quot;+[Case].Caller_Primary_Phone__c,
+ IF(BEGINS([Case].Caller_Primary_Phone__c, &quot;04&quot;) , &quot;+61&quot;+RIGHT([Case].Caller_Primary_Phone__c, 9) ,&quot;&quot;)))
+</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_3_myRule_1_A1_9991316308</name>
+        <dataType>String</dataType>
+        <expression>IF(BEGINS({!myVariable_current.Caller_Primary_Phone__c}, &quot;+614&quot;) , {!myVariable_current.Caller_Primary_Phone__c},
+ IF(BEGINS({!myVariable_current.Caller_Primary_Phone__c}, &quot;614&quot;) , &quot;+&quot;+{!myVariable_current.Caller_Primary_Phone__c},
+ IF(BEGINS({!myVariable_current.Caller_Primary_Phone__c}, &quot;04&quot;) , &quot;+61&quot;+RIGHT({!myVariable_current.Caller_Primary_Phone__c}, 9) ,&quot;&quot;)))</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>&quot;Hi, A ranger is now on his way to attend to the incident you logged with Domestic Animal Services - Case number &quot; &amp; [Case].CaseNumber   &amp; &quot;.&quot;</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_6_myRule_5_A1_2068322063</name>
+        <dataType>String</dataType>
+        <expression>&quot;Hi, A ranger is now on his way to attend to the incident you logged with Domestic Animal Services - Case number &quot; &amp; {!myVariable_current.CaseNumber}   &amp; &quot;.&quot;</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>IF(BEGINS([Case].Caller_Primary_Phone__c, &quot;+614&quot;) , [Case].Caller_Primary_Phone__c,
+ IF(BEGINS([Case].Caller_Primary_Phone__c, &quot;614&quot;) , &quot;+&quot;+[Case].Caller_Primary_Phone__c,
+ IF(BEGINS([Case].Caller_Primary_Phone__c, &quot;04&quot;) , &quot;+61&quot;+RIGHT([Case].Caller_Primary_Phone__c, 9) ,&quot;&quot;)))</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_7_myRule_5_A1_5081645124</name>
+        <dataType>String</dataType>
+        <expression>IF(BEGINS({!myVariable_current.Caller_Primary_Phone__c}, &quot;+614&quot;) , {!myVariable_current.Caller_Primary_Phone__c},
+ IF(BEGINS({!myVariable_current.Caller_Primary_Phone__c}, &quot;614&quot;) , &quot;+&quot;+{!myVariable_current.Caller_Primary_Phone__c},
+ IF(BEGINS({!myVariable_current.Caller_Primary_Phone__c}, &quot;04&quot;) , &quot;+61&quot;+RIGHT({!myVariable_current.Caller_Primary_Phone__c}, 9) ,&quot;&quot;)))</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>ISNEW()
+&amp;&amp;
+[Case].RecordType.Name = &quot;DAS&quot; 
+&amp;&amp;
+( BEGINS([Case].Caller_Primary_Phone__c, &quot;+614&quot;) ||
+ BEGINS([Case].Caller_Primary_Phone__c, &quot;614&quot;) ||
+ BEGINS([Case].Caller_Primary_Phone__c, &quot;04&quot;) )
+ &amp;&amp;
+ISPICKVAL([Case].Priority , &quot;1&quot;)
+&amp;&amp;
+ISPICKVAL([Case].Status , &quot;Awaiting Assignment&quot;)
+
+
+</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_1</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()
+&amp;&amp;
+{!myVariable_current.RecordType.Name} = &quot;DAS&quot; 
+&amp;&amp;
+( BEGINS({!myVariable_current.Caller_Primary_Phone__c}, &quot;+614&quot;) ||
+ BEGINS({!myVariable_current.Caller_Primary_Phone__c}, &quot;614&quot;) ||
+ BEGINS({!myVariable_current.Caller_Primary_Phone__c}, &quot;04&quot;) )
+ &amp;&amp;
+ISPICKVAL({!myVariable_current.Priority} , &quot;1&quot;)
+&amp;&amp;
+ISPICKVAL({!myVariable_current.Status} , &quot;Awaiting Assignment&quot;)</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>ISCHANGED([Case].Status)
+&amp;&amp;
+ISPICKVAL([Case].Status , &quot;Ranger on the way&quot;)
+&amp;&amp;
+[Case].RecordType.Name = &quot;DAS&quot; 
+&amp;&amp;
+( BEGINS([Case].Caller_Primary_Phone__c, &quot;+614&quot;) ||
+ BEGINS([Case].Caller_Primary_Phone__c, &quot;614&quot;) ||
+ BEGINS([Case].Caller_Primary_Phone__c, &quot;04&quot;) )
+ &amp;&amp;
+ISPICKVAL([Case].Priority , &quot;1&quot;)
+</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_5</name>
+        <dataType>Boolean</dataType>
+        <expression>ISCHANGED({!myVariable_current.Status})
+&amp;&amp;
+ISPICKVAL({!myVariable_current.Status} , &quot;Ranger on the way&quot;)
+&amp;&amp;
+{!myVariable_current.RecordType.Name} = &quot;DAS&quot; 
+&amp;&amp;
+( BEGINS({!myVariable_current.Caller_Primary_Phone__c}, &quot;+614&quot;) ||
+ BEGINS({!myVariable_current.Caller_Primary_Phone__c}, &quot;614&quot;) ||
+ BEGINS({!myVariable_current.Caller_Primary_Phone__c}, &quot;04&quot;) )
+ &amp;&amp;
+ISPICKVAL({!myVariable_current.Priority} , &quot;1&quot;)</expression>
+    </formulas>
+    <interviewLabel>Send_SMS_on_Case_Creation-3_InterviewLabel</interviewLabel>
+    <label>Send SMS on Case Creation</label>
+    <processMetadataValues>
+        <name>ObjectType</name>
+        <value>
+            <stringValue>Case</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>ObjectVariable</name>
+        <value>
+            <elementReference>myVariable_current</elementReference>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OldObjectVariable</name>
+        <value>
+            <elementReference>myVariable_old</elementReference>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>TriggerType</name>
+        <value>
+            <stringValue>onAllChanges</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Workflow</processType>
+    <startElementReference>myDecision</startElementReference>
+    <status>Draft</status>
+    <variables>
+        <name>myVariable_current</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Case</objectType>
+    </variables>
+    <variables>
+        <name>myVariable_old</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Case</objectType>
+    </variables>
+</Flow>

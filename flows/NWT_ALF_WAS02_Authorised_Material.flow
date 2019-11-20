@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignments>
+        <description>NWT_Authorised_for_Empty_material__c = true</description>
+        <name>NWT_Set_authorised_for_empty_material_flag_to_true</name>
+        <label>Set authorised for empty material flag to true</label>
+        <locationX>987</locationX>
+        <locationY>306</locationY>
+        <assignmentItems>
+            <assignToReference>NWT_CurrentTransporter.NWT_Authorised_for_Empty_material__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>NWT_Set_Is_Authorised_For_Empty_Material_Flag</targetReference>
+        </connector>
+    </assignments>
+    <description>Authorise transporter for empty material</description>
+    <interviewLabel>NWT_ALF_WAS02_Authorised_Material {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>NWT_ALF_WAS02_Authorised_Material</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Create authorised material record</description>
+        <name>NWT_Create_Authorised_Material</name>
+        <label>Create Authorised Material</label>
+        <locationX>766</locationX>
+        <locationY>126</locationY>
+        <connector>
+            <targetReference>NWT_Set_authorised_for_empty_material_flag_to_true</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>NWT_Material_Master__c</field>
+            <value>
+                <elementReference>MaterialMasterRecord.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>NWT_Transporter__c</field>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </inputAssignments>
+        <object>NWT_Authorised_Material__c</object>
+    </recordCreates>
+    <recordLookups>
+        <description>Retrieve current transporter</description>
+        <name>NWT_Get_Current_Transporter</name>
+        <label>Get Current Transporter</label>
+        <locationX>283</locationX>
+        <locationY>413</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>NWT_Create_Authorised_Material</targetReference>
+        </connector>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <object>NWT_Transporter__c</object>
+        <outputReference>NWT_CurrentTransporter</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>NWT_Authorised_for_Empty_material__c</queriedFields>
+    </recordLookups>
+    <recordLookups>
+        <description>Retrieve empty materia</description>
+        <name>NWT_Retrieve_Empty_material</name>
+        <label>Retrieve Empty material</label>
+        <locationX>283</locationX>
+        <locationY>172</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>NWT_Get_Current_Transporter</targetReference>
+        </connector>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>EMPTY</elementReference>
+            </value>
+        </filters>
+        <object>NWT_Material_Master__c</object>
+        <outputReference>MaterialMasterRecord</outputReference>
+        <queriedFields>Id</queriedFields>
+    </recordLookups>
+    <recordUpdates>
+        <description>updates NWT_Authorised_for_Empty_material__c to trus</description>
+        <name>NWT_Set_Is_Authorised_For_Empty_Material_Flag</name>
+        <label>Set Is Authorised For Empty Material Flag</label>
+        <locationX>1077</locationX>
+        <locationY>564</locationY>
+        <inputReference>NWT_CurrentTransporter</inputReference>
+    </recordUpdates>
+    <startElementReference>NWT_Retrieve_Empty_material</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>EMPTY</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>Empty load</stringValue>
+        </value>
+    </variables>
+    <variables>
+        <description>Store Salesforce record</description>
+        <name>MaterialMasterRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>NWT_Material_Master__c</objectType>
+    </variables>
+    <variables>
+        <description>NWT:Holds current transporter</description>
+        <name>NWT_CurrentTransporter</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>NWT_Transporter__c</objectType>
+    </variables>
+    <variables>
+        <description>Id of the transporter that started this flow</description>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

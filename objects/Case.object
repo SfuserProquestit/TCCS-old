@@ -184,8 +184,8 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <comment>Action override updated by Lightning App Builder during activation.</comment>
-        <content>DAS_Case_LRP</content>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Case_Record_Page</content>
         <formFactor>Large</formFactor>
         <skipRecordTypeSelect>false</skipRecordTypeSelect>
         <type>Flexipage</type>
@@ -285,32 +285,6 @@
             <default>false</default>
         </values>
     </businessProcesses>
-    <fields>
-        <fullName>AA_Complianant_Signature__c</fullName>
-        <description>Data Migration</description>
-        <externalId>false</externalId>
-        <label>AA_Complianant_Signature</label>
-        <length>255</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>AA_IncidentStatus__c</fullName>
-        <description>Data Migration</description>
-        <externalId>false</externalId>
-        <label>AA_IncidentStatus</label>
-        <length>255</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
     <fields>
         <fullName>AccountId</fullName>
         <trackFeedHistory>false</trackFeedHistory>
@@ -469,35 +443,9 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>CORE_Address__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <externalId>false</externalId>
-        <label>Address</label>
-        <referenceTo>CORE_Address__c</referenceTo>
-        <relationshipLabel>Cases</relationshipLabel>
-        <relationshipName>Cases</relationshipName>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
         <fullName>CSR_Initials__c</fullName>
         <externalId>false</externalId>
         <label>CSR Initials</label>
-        <length>255</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Call_Details__c</fullName>
-        <externalId>false</externalId>
-        <label>Call Details</label>
         <length>255</length>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
@@ -1137,45 +1085,9 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>Owner_DOB__c</fullName>
-        <description>Data Migration</description>
-        <externalId>false</externalId>
-        <label>Owner DOB</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Date</type>
-    </fields>
-    <fields>
-        <fullName>Owner_Email__c</fullName>
-        <description>Data Migration</description>
-        <externalId>false</externalId>
-        <label>Owner Email</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Email</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>Owner_First_Name__c</fullName>
         <externalId>false</externalId>
         <label>Owner First Name</label>
-        <length>255</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Owner_Gender__c</fullName>
-        <description>Data Migration</description>
-        <externalId>false</externalId>
-        <label>Owner Gender</label>
         <length>255</length>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
@@ -1501,7 +1413,6 @@
         <label>Work Type</label>
         <lookupFilter>
             <active>true</active>
-            <errorMessage>Please select either &quot;Dog Attack&quot; or &quot;Roaming/Stray Dog&quot; as the Work Type.</errorMessage>
             <filterItems>
                 <field>WorkType.Name</field>
                 <operation>notContain</operation>
@@ -1510,12 +1421,12 @@
             <filterItems>
                 <field>WorkType.Name</field>
                 <operation>notContain</operation>
-                <value>Impound</value>
+                <value>Seizure</value>
             </filterItems>
             <filterItems>
                 <field>WorkType.Name</field>
                 <operation>notContain</operation>
-                <value>Seizure</value>
+                <value>Impound</value>
             </filterItems>
             <isOptional>false</isOptional>
         </lookupFilter>
@@ -1527,6 +1438,15 @@
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BIN_Service_Request_Number__c</fullName>
+        <displayFormat>SR{000000}</displayFormat>
+        <externalId>false</externalId>
+        <label>Service Request Number</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
     </fields>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>true</enableFeeds>
@@ -1562,38 +1482,14 @@
         <fullName>AllOpenCases</fullName>
         <columns>CASES.CASE_NUMBER</columns>
         <columns>Work_Type__c</columns>
-        <columns>CASES.TYPE</columns>
         <columns>CASES.SUBJECT</columns>
-        <columns>Incident_City__c</columns>
         <columns>CASES.STATUS</columns>
         <columns>CASES.PRIORITY</columns>
         <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
-        <columns>CORE.USERS.ALIAS</columns>
+        <columns>Caller_Street__c</columns>
+        <columns>ACCOUNT.NAME</columns>
         <filterScope>Everything</filterScope>
-        <filters>
-            <field>CASES.CLOSED</field>
-            <operation>equals</operation>
-            <value>0</value>
-        </filters>
         <label>All Open Cases</label>
-    </listViews>
-    <listViews>
-        <fullName>All_Cases_Closed</fullName>
-        <columns>CASES.CASE_NUMBER</columns>
-        <columns>CASES.SUBJECT</columns>
-        <columns>CASES.STATUS</columns>
-        <columns>CASES.PRIORITY</columns>
-        <columns>CORE.USERS.ALIAS</columns>
-        <columns>CASES.TYPE</columns>
-        <columns>Work_Type__c</columns>
-        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>CASES.CLOSED</field>
-            <operation>equals</operation>
-            <value>1</value>
-        </filters>
-        <label>All Cases Closed</label>
     </listViews>
     <listViews>
         <fullName>BIN_Customer_Service_All_Open</fullName>
@@ -1870,10 +1766,6 @@
                 <default>false</default>
             </values>
             <values>
-                <fullName>Customer Service Officer</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>DAS</fullName>
                 <default>false</default>
             </values>
@@ -1975,18 +1867,6 @@
                 <default>false</default>
             </values>
             <values>
-                <fullName>Critical</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>High</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Low</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>Medium</fullName>
                 <default>true</default>
             </values>
@@ -2032,10 +1912,6 @@
         <picklistValues>
             <picklist>Type</picklist>
             <values>
-                <fullName>AFP Assist</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>Abandoned animal</fullName>
                 <default>false</default>
             </values>
@@ -2060,31 +1936,11 @@
                 <default>false</default>
             </values>
             <values>
-                <fullName>Dog Attack on Child</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Dog Attack on Dog</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Dog Attack on Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Dog Attack on Person</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>Dog harass</fullName>
                 <default>false</default>
             </values>
             <values>
                 <fullName>Dog off leash</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Feature Request</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -2121,14 +1977,6 @@
             </values>
             <values>
                 <fullName>Proactive patrols</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Problem</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Question</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -2244,6 +2092,10 @@
         <picklistValues>
             <picklist>Origin</picklist>
             <values>
+                <fullName>Access Canberra</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>DAS</fullName>
                 <default>false</default>
             </values>
@@ -2317,16 +2169,24 @@
                 <fullName>Email</fullName>
                 <default>false</default>
             </values>
+            <values>
+                <fullName>Mobile</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Phone</fullName>
+                <default>false</default>
+            </values>
         </picklistValues>
         <picklistValues>
             <picklist>Priority</picklist>
             <values>
                 <fullName>1</fullName>
-                <default>false</default>
+                <default>true</default>
             </values>
             <values>
                 <fullName>2</fullName>
-                <default>true</default>
+                <default>false</default>
             </values>
             <values>
                 <fullName>3</fullName>
@@ -2363,16 +2223,20 @@
         <picklistValues>
             <picklist>Refused_Reason__c</picklist>
             <values>
+                <fullName>Address shares the recycling and garbage facilities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assistance already provided</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Contractor unable to provide service</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
         <picklistValues>
             <picklist>Type</picklist>
-            <values>
-                <fullName>AFP Assist</fullName>
-                <default>false</default>
-            </values>
             <values>
                 <fullName>Abandoned animal</fullName>
                 <default>false</default>
@@ -2395,22 +2259,6 @@
             </values>
             <values>
                 <fullName>Dog Attack</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Dog Attack on Child</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Dog Attack on Dog</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Dog Attack on Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Dog Attack on Person</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -2451,10 +2299,6 @@
             </values>
             <values>
                 <fullName>Proactive patrol</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Proactive patrols</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -2655,6 +2499,22 @@
         <picklistValues>
             <picklist>Priority</picklist>
             <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Medium</fullName>
                 <default>false</default>
             </values>
@@ -2697,6 +2557,89 @@
                 <default>false</default>
             </values>
         </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Abandoned animal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Aggressive dog</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Animal Nuisance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Animal Welfare</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dead dog%2Fcat</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dog Attack</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dog harass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dog off leash</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hoarding</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Illegal breeding</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Injured%2Fdead animal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inspections</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lost%2Ffound animal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pick Up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proactive patrol</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proactive patrols</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Roaming%2FStray Dog</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Uncontrolled animal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Welfare %2F neglect</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
     </recordTypes>
     <validationRules>
         <fullName>DAS_VR_CAS01_Restrict_Editing_the_Case</fullName>
@@ -2708,16 +2651,6 @@
 				NOT(ISPICKVAL(Status,&apos;In Progress&apos;)),
 				TEXT(PRIORVALUE(Status))= &apos;Requires Investigation&apos;,
 				RecordType.DeveloperName = &apos;DAS&apos;
-)</errorConditionFormula>
-        <errorMessage>You cannot edit when a case is under investigation</errorMessage>
-    </validationRules>
-    <validationRules>
-        <fullName>Restrict_Editing_the_Case</fullName>
-        <active>true</active>
-        <errorConditionFormula>AND(
-				NOT(ISCHANGED(To_Prevent_Validation_Rule__c)),
-				NOT(ISPICKVAL(Status,&apos;Investigation Completed&apos;)),
-				TEXT(PRIORVALUE(Status))= &apos;Requires Investigation&apos;
 )</errorConditionFormula>
         <errorMessage>You cannot edit when a case is under investigation</errorMessage>
     </validationRules>
@@ -2744,5 +2677,65 @@
         <openType>noSidebar</openType>
         <protected>false</protected>
         <url>/flow/BIN_SF_SR01_Specify_Refused_Reason?recordId={!Case.Id}&amp;retURL=/{!Case.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>OptIn</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>OptIn</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+{!REQUIRESCRIPT(&apos;/support/console/31.0/integration.js&apos;)};
+
+var recordId = window.location.pathname.substring(1);
+var returnURL = &apos;/&apos; + recordId;
+
+var urlStart = &apos;https://&apos;+window.location.hostname+&apos;/apex/LiveText__LiveTextOptinStatusPage?records=&apos;+recordId+&apos;&amp;retURL=&apos;+returnURL;
+
+if(sforce.console.isInConsole()) {
+sforce.console.openPrimaryTab(null, urlStart + &apos;&amp;inConsole=yes&amp;optType=1&apos;, true, &apos;Opt-in for Text Messages&apos;);
+}else{
+window.top.location.href = urlStart + &apos;&amp;inConsole=no&amp;optType=1&apos;;
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Send_Text_Message</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Send Text Message</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&apos;/soap/ajax/31.0/connection.js&apos;)};
+{!REQUIRESCRIPT(&apos;/soap/ajax/31.0/apex.js&apos;)};
+{!REQUIRESCRIPT(&apos;/support/console/31.0/integration.js&apos;)};
+
+var objectId = window.location.pathname.substring(1);
+var recordPrefix = objectId.substring(0, 3);
+var phoneInformation = JSON.parse(sforce.apex.execute(&quot;LiveText.RetrievePreferredPhoneNumber&quot;,&quot;getToPhoneInformationFromObject&quot;,{selectedObjId:objectId}));
+var phoneNumber = phoneInformation[&apos;phone&apos;];
+var oObjectId = phoneInformation[&apos;orginatingObjectId&apos;];
+var ownerId = phoneInformation[&apos;ownerId&apos;];
+var params = &apos;&amp;phone=&apos;+phoneNumber.replace(&apos;+&apos;, &apos;%2B&apos;) +&apos;&amp;oid=&apos;+objectId+&apos;&amp;conversationtype=outbound&amp;objectprefix=&apos;+recordPrefix+&apos;&amp;ownerId=&apos;+ownerId+&apos;&amp;orginatingObjectId=&apos;+oObjectId;
+var conversationSessionPrefix = &apos;/{!$ObjectType.LiveText__Conversation_Session__c}/e?cvid=null&apos;+params;
+
+if(sforce.console.isInConsole()){
+    sforce.console.openPrimaryTab(null, conversationSessionPrefix, true, &apos;{!HTMLENCODE($Label.livetext__txt_conversation)}&apos;, null);
+    var closeSubtab = function closeSubtab(result) {
+        var tabId = result.id;
+        sforce.console.closeTab(tabId);
+    };
+    sforce.console.getEnclosingTabId(closeSubtab);
+}else{
+    var query = &quot;SELECT Id FROM AppMenuItem WHERE Name=&apos;LiveText_Console&apos;&quot;;
+    sforce.connection.sessionId = &apos;{!$Api.Session_ID}&apos;;
+    var queryResult = sforce.connection.query(query);
+    var records = queryResult.getArray(&apos;records&apos;);
+    var ltId = records[0].Id;
+    window.top.location.href = &apos;https://&apos;+window.location.hostname+&apos;/console?tsid=&apos;+ltId +&apos;#&apos;+conversationSessionPrefix;
+}</url>
     </webLinks>
 </CustomObject>

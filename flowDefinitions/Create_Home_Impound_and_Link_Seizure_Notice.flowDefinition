@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>3</activeVersionNumber>
+    <description>This Flow is used in Process Builder in order to support Home Impound Offline capability on the FSL app</description>
+    <masterLabel>DAS_ALF_WOL01_Create_Home_Impound_and_Link_Seizure_Notice</masterLabel>
+</FlowDefinition>

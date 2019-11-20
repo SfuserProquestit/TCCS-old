@@ -1,47 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Report xmlns="http://soap.sforce.com/2006/04/metadata">
     <columns>
+        <field>CASE_NUMBER</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <columns>
+        <field>PRIORITY</field>
+    </columns>
+    <columns>
+        <field>MILESTONESTATUS</field>
+    </columns>
+    <columns>
         <field>SUBJECT</field>
     </columns>
     <columns>
-        <field>TYPE</field>
+        <field>ORIGIN</field>
     </columns>
     <columns>
-        <field>Case.Work_Type__c</field>
+        <field>CREATED_DATE</field>
     </columns>
     <columns>
-        <field>Case.Incident_City__c</field>
+        <field>MT.NAME</field>
     </columns>
     <columns>
-        <field>CREATED_DATEONLY</field>
+        <field>CM.TARGET_DATE</field>
     </columns>
     <columns>
-        <field>OPEN</field>
-    </columns>
-    <columns>
-        <field>CLOSED</field>
+        <field>CM.COMPLETION_DATE</field>
     </columns>
     <format>Tabular</format>
-    <name>DAS Report Test 1</name>
+    <name>New Cases with Milestones Report</name>
     <params>
         <name>units</name>
-        <value>h</value>
+        <value>m</value>
     </params>
     <params>
         <name>co</name>
         <value>1</value>
     </params>
-    <reportType>CaseList</reportType>
+    <reportType>CaseMilestone</reportType>
     <scope>organization</scope>
     <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>true</showSubTotals>
-    <sortColumn>CREATED_DATEONLY</sortColumn>
-    <sortOrder>Desc</sortOrder>
+    <sortColumn>CASE_NUMBER</sortColumn>
+    <sortOrder>Asc</sortOrder>
     <timeFrameFilter>
         <dateColumn>CREATED_DATEONLY</dateColumn>
-        <endDate>2019-08-06</endDate>
         <interval>INTERVAL_CUSTOM</interval>
-        <startDate>2019-07-18</startDate>
     </timeFrameFilter>
 </Report>

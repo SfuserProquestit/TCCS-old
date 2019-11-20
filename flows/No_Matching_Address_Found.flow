@@ -10,7 +10,7 @@
         <processMetadataValues>
             <name>textJson</name>
             <value>
-                <stringValue>{&quot;mentions&quot;:[],&quot;message&quot;:&quot;Dear Admin,\n\nThe address \&quot;{![Case].Incident_Street__c} {![Case].Incident_City__c} {![Case].Incident_State_Province__c} {![Case].Incident_Zip_Postal_Code__c}\&quot;  captured on this record is invalid.&quot;}</stringValue>
+                <stringValue>{&quot;mentions&quot;:[],&quot;message&quot;:&quot;Dear Admin,\n\nThe address \&quot;{![Case].Incident_Street__c} {![Case].Incident_City__c} {![Case].Incident_State_Province__c} {![Case].Incident_Zip_Postal_Code__c}\&quot;  captured on this record is invalid.\n\nPlease update the record {![Case].Case_Id_Hyperlink__c} and provide a correct address.\n\nThanks.&quot;}</stringValue>
             </value>
         </processMetadataValues>
         <name>myRule_1_A1</name>
@@ -24,7 +24,11 @@
             <value>
                 <stringValue>Dear Admin,
 
-The address &quot;{!myVariable_current.Incident_Street__c} {!myVariable_current.Incident_City__c} {!myVariable_current.Incident_State_Province__c} {!myVariable_current.Incident_Zip_Postal_Code__c}&quot;  captured on this record is invalid.</stringValue>
+The address &quot;{!myVariable_current.Incident_Street__c} {!myVariable_current.Incident_City__c} {!myVariable_current.Incident_State_Province__c} {!myVariable_current.Incident_Zip_Postal_Code__c}&quot;  captured on this record is invalid.
+
+Please update the record {!myVariable_current.Case_Id_Hyperlink__c} and provide a correct address.
+
+Thanks.</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -36,7 +40,7 @@ The address &quot;{!myVariable_current.Incident_Street__c} {!myVariable_current.
         <inputParameters>
             <name>subjectNameOrId</name>
             <value>
-                <stringValue>0F96F0000006KdlSAE</stringValue>
+                <stringValue>0F9p00000000hiRCAQ</stringValue>
             </value>
         </inputParameters>
     </actionCalls>
@@ -156,7 +160,7 @@ The address &quot;{!myVariable_current.Incident_Street__c} {!myVariable_current.
         </rules>
     </decisions>
     <description>If the address entered by user on case is invalid send chatter notification</description>
-    <interviewLabel>No_Matching_Address_Found-2_InterviewLabel</interviewLabel>
+    <interviewLabel>No_Matching_Address_Found-3_InterviewLabel</interviewLabel>
     <label>Notify DAS Admin No Matching Address Found</label>
     <processMetadataValues>
         <name>ObjectType</name>

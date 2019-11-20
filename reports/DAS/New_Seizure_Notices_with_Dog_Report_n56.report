@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Seizure_Notice__c.Seizure_Offence_Type__c</field>
+    </columns>
+    <columns>
+        <field>Seizure_Notice__c.Seizure_Notice_served_on__c</field>
+    </columns>
+    <columns>
+        <field>Seizure_Notice__c.Owner_Person_in_Charge__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>New Seizure Notices with Dog Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Seizure_Notice__c@Seizure_Notice__c.Dog__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Seizure_Notice__c.Date_of_Seizure__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

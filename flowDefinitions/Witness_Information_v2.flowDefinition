@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>4</activeVersionNumber>
+    <description>Witness Information rebuild on FSL flow and WOLI</description>
+    <masterLabel>DAS_FSMF_SAP01_Witness_Information</masterLabel>
+</FlowDefinition>
