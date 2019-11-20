@@ -1,0 +1,60 @@
+<template>
+    
+    <!-- SEARCH INPUT -->
+    <template if:false={selectedAddress}>
+        <div class="slds-m-around_medium">
+            <lightning-input type="text" label="Enter Address" onchange={handleAddressKeyChange} required>
+            </lightning-input>
+        </div>
+
+        
+        <template if:true={showSpinner}>
+            <div class="addressSpinner">
+                <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
+            </div>
+        </template>
+        <template if:false={showSpinner}>
+            <template if:true={displayResult}>
+                <div class="addressContainer slds-text-body_regular">
+                    <template for:each={addressess} for:item="address">
+                        <div key={address.Id} data-item={address.Id} onclick={handleSelectAddress}>
+                            {address.Street_Address__c}, {address.Suburb_Name__c} - {address.PostCode__c}
+                        </div>
+                    </template>
+                </div>
+            </template>
+            <template if:true={displayResultNotFound}>
+                <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error addressErrorMsg" role="alert">
+                    <span class="slds-assistive-text">error</span>
+                    <h2>
+                        We are sorry, but no addresses in our database seem to match your entry. Please try entering the address again or call Access Canberra on XX XX XX for additional support.
+                    </h2>
+                </div>
+            </template>
+        </template>
+        <!-- <template if:true={error}>
+            {error}
+        </template> -->
+    </template>
+    
+    <!-- SELECTED ADDRESS  -->
+    <template if:true={selectedAddress}>
+        
+        <div class="selectedAddressContainer">
+            <lightning-card variant="narrow" icon-name="standard:household">
+                <div class="addressCardTitle" slot="title" >
+                    {selectedAddress.Street_Address__c}, {selectedAddress.Suburb_Name__c} - {selectedAddress.PostCode__c}
+                </div>
+            
+                <div slot="actions">
+                    <template if:false={reviewMode}>
+                        <lightning-button-icon icon-name="utility:close" onclick={handleDeleteAddress}></lightning-button-icon>
+                    </template>
+                </div>
+                
+            </lightning-card>
+        </div>
+    </template>
+
+
+</template>

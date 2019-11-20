@@ -10,6 +10,14 @@
         <startAddress>0.0.0.0</startAddress>
     </loginIpRanges>
     <userLicense>Salesforce</userLicense>
+    <classAccesses>
+        <apexClass>BIN_CoreAddressDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>BIN_CoreAddressDAOTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
     <pageAccesses>
 <apexPage>AnswersHome</apexPage>
 <enabled>false</enabled>
@@ -106,8 +114,6 @@
 <apexPage>UnderConstruction</apexPage>
 <enabled>false</enabled>
 </pageAccesses>
-    
-    
     <fieldPermissions>
         <editable>true</editable>
         <field>Case.AccountId</field>
@@ -158,13 +164,11 @@
         <field>Case.BusinessHoursId</field>
         <readable>true</readable>
     </fieldPermissions>
-    
     <fieldPermissions>
         <editable>true</editable>
         <field>Case.CSR_Initials__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    
     <fieldPermissions>
         <editable>true</editable>
         <field>Case.Caller_Account__c</field>
@@ -395,14 +399,11 @@
         <field>Case.Owner_Country__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    
-    
     <fieldPermissions>
         <editable>true</editable>
         <field>Case.Owner_First_Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    
     <fieldPermissions>
         <editable>true</editable>
         <field>Case.Owner_Last_Name__c</field>
@@ -561,6 +562,81 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Case.BIN_Service_Request_Number__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>CORE_Address__c.Block_Number__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>CORE_Address__c.Door_Number_Char__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>CORE_Address__c.In_Scope__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>CORE_Address__c.Land_Use_Code__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>CORE_Address__c.PostCode__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>CORE_Address__c.SSBU__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>CORE_Address__c.Section_Number__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>CORE_Address__c.Street_Address__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>CORE_Address__c.Street_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>CORE_Address__c.Street_Number__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>CORE_Address__c.Suburb_Id__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>CORE_Address__c.Suburb_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>CORE_Address__c.Unit_Id__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>CORE_Address__c.Unit_Number_Char__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>CORE_Address__c.Unit_Number__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <layoutAssignments>
@@ -963,6 +1039,10 @@
     </recordTypeVisibilities>
     <tabVisibilities>
         <tab>standard-Case</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>CORE_Address__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <userPermissions>
