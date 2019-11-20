@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Awaiting Assignment</fullName>
+        <default>true</default>
+        <label>Awaiting Assignment</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Ranger Assigned</fullName>
+        <default>false</default>
+        <label>Ranger Assigned</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Job Accepted</fullName>
+        <default>false</default>
+        <label>Job Accepted</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Ranger on the way</fullName>
+        <default>false</default>
+        <label>Ranger on the way</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>In Progress</fullName>
+        <default>false</default>
+        <label>In Progress</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Service Appointment Completed</fullName>
+        <default>false</default>
+        <label>Service Appointment Completed</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Requires Investigation</fullName>
+        <default>false</default>
+        <label>Requires Investigation</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Investigation Completed</fullName>
+        <default>false</default>
+        <label>Investigation Completed</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>RAC</fullName>
+        <default>false</default>
+        <label>RAC</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Outcome</fullName>
+        <default>false</default>
+        <label>Outcome</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Case Closed</fullName>
+        <default>false</default>
+        <label>Case Closed</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Cancelled</fullName>
+        <default>false</default>
+        <label>Cancelled</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Submitted for Closure</fullName>
+        <default>false</default>
+        <label>Submitted for Closure</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Closure Rejected</fullName>
+        <default>false</default>
+        <label>Closure Rejected</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Open</fullName>
+        <default>false</default>
+        <label>Open</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Refused</fullName>
+        <default>false</default>
+        <label>Refused</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Approved</fullName>
+        <default>false</default>
+        <label>Approved</label>
+        <closed>false</closed>
+    </standardValue>
+</StandardValueSet>

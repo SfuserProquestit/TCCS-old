@@ -1766,6 +1766,10 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Customer Service Officer</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>DAS</fullName>
                 <default>false</default>
             </values>
@@ -1867,6 +1871,18 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Medium</fullName>
                 <default>true</default>
             </values>
@@ -1912,6 +1928,10 @@
         <picklistValues>
             <picklist>Type</picklist>
             <values>
+                <fullName>AFP Assist</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Abandoned animal</fullName>
                 <default>false</default>
             </values>
@@ -1936,11 +1956,31 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Dog Attack on Child</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dog Attack on Dog</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dog Attack on Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dog Attack on Person</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Dog harass</fullName>
                 <default>false</default>
             </values>
             <values>
                 <fullName>Dog off leash</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Feature Request</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -1977,6 +2017,14 @@
             </values>
             <values>
                 <fullName>Proactive patrols</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question</fullName>
                 <default>false</default>
             </values>
             <values>

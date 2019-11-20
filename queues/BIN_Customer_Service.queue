@@ -6,6 +6,9 @@
         <publicGroups>
             <publicGroup>BIN_Customer_Service</publicGroup>
         </publicGroups>
+        <users>
+            <user>access_canberra_bins_citizens@binsdev-tccsact.cs57.force.com</user>
+        </users>
     </queueMembers>
     <queueSobject>
         <sobjectType>Case</sobjectType>
