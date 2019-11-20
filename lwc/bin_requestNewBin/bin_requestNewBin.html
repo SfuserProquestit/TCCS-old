@@ -1,0 +1,194 @@
+<template>
+
+    <div class="container">
+        <!-- PAGE HEADER -->
+        <div class="header">
+            <div class="logos">
+                <img src={actGovLogo} class="actGovLogo">
+                <img src={accessCanberraLogo} class="acLogo" >
+            </div>
+            <div class="headerContainer">
+                <div class="headerTitle">
+                    {labelPageTitle}
+                </div>
+            </div>
+        </div>
+        
+        <!-- PAGE BODY -->
+        <div class={desktopClass}>
+            
+
+            <!-- PATH -->
+            <template if:true={isDesktop}>
+                <div style="margin:20px 0">
+                    <c-bin_request-form-path paths={formPaths} current-stage={pageStep} onstageclick={handleStageClick}></c-bin_request-form-path>
+                </div>
+            </template>
+
+            <template if:true={reviewMode}>
+                <div class="slds-text-heading_medium reviewRequestTitle" >
+                    {labelReview}
+                </div>
+            </template>
+
+    
+            <!-- STEP 1: Search Address + Display Entitlements -->
+            <div class={showPage1}>
+    
+                <div class="stepContentBox">
+
+                    <!-- Title Edit Mode -->
+                    <div class="stepDescriptionBlock">
+                        <div class="stepsNumber">
+                            <span class="stepsNumberContent">1
+                            </span>
+                        </div>
+                        <div class="stepDescription">{labelStep1}</div>
+                        <template if:true={reviewMode}>
+                            <!-- Edit Details Button -->
+                            <lightning-button variant="base" label={labelEdit} title="Edit Address Details" icon-name="utility:edit"
+                                class="slds-m-left_x-small" data-item=1 onclick={handleGotoPage}></lightning-button>
+                        </template>
+                    </div>
+        
+                    
+                    <!-- COMPONENT: Address Search -->
+                    <c-bin_address-search   review-mode={reviewMode}
+                                            onaddressvaluechange={handleAddressValueChange}
+                                            onhandledeleteaddress={handleOnDeleteSelected}>
+                    </c-bin_address-search>
+            
+                    
+                    <!-- COMPONENT: Entitlement  -->
+                    <div style="margin: 30px 20px;background-color: #fafaf9;padding: 10px;border-radius: 5px;">
+                        <c-bin_address-entitlement  land-use-code={landUseCode}
+                                                    onentitlementchanged={handleEntitlementChange}>
+                        
+                        </c-bin_address-entitlement>
+                    </div>
+
+                </div>
+    
+                <div class="stepContentBox">
+
+                    <div class="stepDescriptionBlock">
+                        <div class="stepsNumber">
+                            <span class="stepsNumberContent">2
+                            </span>
+                        </div>
+                        <div class="stepDescription">{labelStep2}</div>
+                        <template if:true={reviewMode}>
+        
+                            <!-- Edit Details Button -->
+                            <lightning-button variant="base" label={labelEdit} title="Edit Date Details" icon-name="utility:edit"
+                                class="slds-m-left_x-small" data-item=1 onclick={handleGotoPage}></lightning-button>
+                        </template>
+                    </div>
+                    
+                    <div style="margin:5px 20px">
+                        
+                        <template if:true={reviewMode}>
+                            <template if:true={deliveryDate}>
+                                <lightning-input type="date" value={deliveryDate} style="margin-bottom:5px;" disabled></lightning-input>
+                            </template>
+                        </template>
+        
+                        <template if:false={reviewMode}>
+                            <lightning-input value={deliveryDate} onchange={handleChangeDeliveryDate} style="margin-bottom:5px;" type="date"
+                                label="Enter delivery date" min={minDeliveryDate}></lightning-input>
+                        </template>
+                    
+                        <lightning-input onclick={selectDeliveryAsap} class="deliverAsap" type="checkbox" label="Deliver as soon as possible" disabled checked></lightning-input>
+        
+                    </div>
+
+                </div>
+            </div>
+    
+            <!-- STEP 2: Contact Details -->
+            <div class={showPage2} style="padding-bottom:0px;">
+    
+                <div class="stepDescriptionBlock">
+                    <div class="stepsNumber">
+                        <span class="stepsNumberContent">3
+                        </span>
+                    </div>
+                    <div class="stepDescription">{labelStep3}</div>
+                    <template if:true={reviewMode}>
+    
+                        <!-- Edit Details Button -->
+                        <lightning-button variant="base" label={labelEdit} title="Edit Contact Details" icon-name="utility:edit"
+                            class="slds-m-left_x-small" data-item=2 onclick={handleGotoPage}></lightning-button>
+                    </template>
+                </div>
+            
+    
+                <div style="margin:10px">
+                    <c-bin_service-request-contact-detail   review-mode={reviewMode}
+                                                            onsavecontactdetails={handleSaveContactDetails}
+                                                            onclickpreviousbutton={handlePrevious}>
+                    </c-bin_service-request-contact-detail>
+                </div>
+            </div>
+
+            <template if:true={showCompleteStep}>
+            
+                <div style="border: 1px solid #dddbda; border-radius: 5px; padding: 10px;">
+                    <div class="slds-text-heading_medium reviewColor" style="font-size: 1.8em; font-weight: 500; margin-bottom: 10px;">
+                        {labelRequestReceivedTitle}
+                    </div>
+            
+                    <div style="font-size: 1.2em; color: #472d8c;">{labelRequestReceivedMessage}</div>
+                    <div style="padding: 5px;text-align: center;background-color: #aa4298;color: #fff;font-size: 1.2em;border-radius: 5px;margin: 20px 0;">{labelRequestReceivedCode} 
+                        
+                        <div style="font-size:1.4em; font-weight:bold;">{serviceRequestNumber}</div>
+                    
+                    </div>
+
+                    <div class="slds-text-heading_medium" style="font-weight: 500; margin-bottom: 10px; color:#404041">
+                        {checkYourTitle}
+                    </div>
+                    
+                    <div style="color: #404041;white-space: pre-wrap;">{checkYourMessage}</div>
+                </div>
+            
+            </template>
+
+        
+            <!-- PAGE FOOTER -->
+            <div class="requestFooter">
+                
+                <!-- <template if:true={showPreviousButton}>
+                        <lightning-button   variant="brand"
+                                            label="Previous" 
+                                            title="Previous" 
+                                            onclick={handlePrevious} 
+                                            class="slds-m-left_x-small newBinPageButton">
+                        </lightning-button>
+                </template> -->
+        
+                <template if:true={showNextButton}>
+                    <lightning-button   variant="brand"
+                                        label="Next" 
+                                        title="Next" 
+                                        onclick={handleNext} 
+                                        class="slds-m-left_x-small newBinPageButton">
+                    </lightning-button>
+                </template>
+                <template if:true={reviewMode}>
+                    <lightning-button   variant="brand"
+                                        label="Submit" 
+                                        title="Submit" 
+                                        onclick={handleSubmitRequest} 
+                                        class="slds-m-left_x-small newBinPageButton">
+                    </lightning-button>
+                </template>
+
+            </div>
+
+            <br />
+            <br />
+        </div>
+        
+    </div>
+</template>

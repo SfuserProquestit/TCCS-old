@@ -18,6 +18,18 @@
         <apexClass>BIN_CoreAddressDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
+    <classAccesses>
+        <apexClass>BIN_ServiceRequestDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>BIN_ServiceRequestDAOTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>BIN_WorkOrderDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
     <pageAccesses>
 <apexPage>AnswersHome</apexPage>
 <enabled>false</enabled>
@@ -637,6 +649,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>CORE_Address__c.Unit_Number__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Case.CORE_Address__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <layoutAssignments>

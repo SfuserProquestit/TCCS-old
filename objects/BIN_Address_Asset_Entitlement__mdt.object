@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Bin_Colour__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Bin Colour</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Red</fullName>
+                    <default>false</default>
+                    <label>Red</label>
+                </value>
+                <value>
+                    <fullName>Yellow</fullName>
+                    <default>false</default>
+                    <label>Yellow</label>
+                </value>
+                <value>
+                    <fullName>Lime Green</fullName>
+                    <default>false</default>
+                    <label>Lime Green</label>
+                </value>
+                <value>
+                    <fullName>Bulky</fullName>
+                    <default>false</default>
+                    <label>Bulky</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Bin_Purpose__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Bin Purpose</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Garbage</fullName>
+                    <default>true</default>
+                    <label>Garbage</label>
+                </value>
+                <value>
+                    <fullName>Recycling</fullName>
+                    <default>false</default>
+                    <label>Recycling</label>
+                </value>
+                <value>
+                    <fullName>Organics</fullName>
+                    <default>false</default>
+                    <label>Organics</label>
+                </value>
+                <value>
+                    <fullName>FOGO</fullName>
+                    <default>false</default>
+                    <label>FOGO</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Bin_Size__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Bin Size</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>140L</fullName>
+                    <default>false</default>
+                    <label>140L</label>
+                </value>
+                <value>
+                    <fullName>2000L</fullName>
+                    <default>false</default>
+                    <label>2000L</label>
+                </value>
+                <value>
+                    <fullName>240L</fullName>
+                    <default>false</default>
+                    <label>240L</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Bin_Type__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Bin Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Hopper</fullName>
+                    <default>true</default>
+                    <label>Hopper</label>
+                </value>
+                <value>
+                    <fullName>MGB</fullName>
+                    <default>false</default>
+                    <label>MGB</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Is_New_Set_Bin__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field will inform if this bin entitlement will be considered for delivery of New Set of bins.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Is New Set Bin</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Land_Use_Code__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Land Use Code</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Land_Use_Description__c</fullName>
+        <description>This field is used for TCCS info only</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Land Use Description</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NW_Category__c</fullName>
+        <description>This fields describe the category of the entitlements (Eg. SUD, MUD - KERB)</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>NW Category</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>SUD</fullName>
+                    <default>true</default>
+                    <label>SUD</label>
+                </value>
+                <value>
+                    <fullName>MUD - KERB</fullName>
+                    <default>false</default>
+                    <label>MUD - KERB</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>NW_Entitlement__c</fullName>
+        <description>This field is used for TCCS info only</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>NW Entitlement</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Standard</fullName>
+                    <default>true</default>
+                    <label>Standard</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Quantity__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Quantity</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <description>This is Related to Bins project.</description>
+    <label>BIN Address Asset Entitlement</label>
+    <pluralLabel>BIN Address Asset Entitlements</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

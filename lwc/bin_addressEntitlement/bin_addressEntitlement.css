@@ -1,0 +1,24 @@
+.listItemEntitlements{
+    padding: 5px;
+    display: table;
+    width: 100%;
+    background-color: #fafaf9;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+.listItemEntitlements .itemIcon{
+    float: left;
+}
+.listItemEntitlements .itemText{
+    float: left;
+    margin-left: 5px;
+    border-left: 1px solid #dddbda;
+    padding-left: 5px;
+}
+
+.entitlementTextBox{
+    margin-bottom: 10px;
+    display: block;
+    color:#472d8c;
+    font-size: 1rem;
+}

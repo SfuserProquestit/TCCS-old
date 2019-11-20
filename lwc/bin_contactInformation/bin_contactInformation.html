@@ -1,0 +1,49 @@
+<template>
+        <lightning-record-edit-form object-api-name="Contact">
+        
+        <lightning-combobox required name="Title" label = "Title" value={value} 
+            placeholder="-Select-"  onchange={handleChange}> <!--options={titlePicklistValues.data.values}-->
+            </lightning-combobox>    
+        <!--<lightning-input-field field-name="Title" value={contact.Title}>
+            </lightning-input-field> value={contact.Title}-->   
+        <lightning-input-field required field-name="FirstName" value={contact.FirstName}>
+            </lightning-input-field>
+        <lightning-input-field required field-name="LastName" value={contact.LastName}>
+            </lightning-input-field>
+        <lightning-input type="tel" label="Mobile" value={contact.Mobile} pattern="/^(?:\+?61|0)4 ?(?:(?:[01] ?[0-9]|2 ?[0-57-9]|3 ?[1-9]|4 ?[7-9]|5 ?[018]) ?[0-9]|3 ?0 ?[0-5])(?: ?[0-9]){5}$/">
+            </lightning-input>    <!--field-name="Mobile" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"-->
+        <lightning-input type="Email" name="Email" label="Email" value={contact.Email}>
+            </lightning-input>
+        <lightning-input type="tel" label="Landline" value={contact.Landline} pattern="/^(?:\+?61|0)4 ?(?:(?:[01] ?[0-9]|2 ?[0-57-9]|3 ?[1-9]|4 ?[7-9]|5 ?[018]) ?[0-9]|3 ?0 ?[0-5])(?: ?[0-9]){5}$/">
+            </lightning-input>
+        <lightning-combobox required name="PreferredContactMethod" label = "Preferred Contact Method" value={contact.PreferredContactMethod} 
+                placeholder="-Select-" options="preferredContactMethodList">
+            </lightning-combobox>
+        <lightning-input type="checkbox" label="This service is for someone else" value={contact.RequestForSomeoneElse}>
+            </lightning-input>
+            <!--<template if:true={contact.RequestForSomeoneElse}>
+            <lightning-input-field field-name="RequestedFirstName" value={contact.RequestedFirstName}>
+                </lightning-input-field>
+            </template>-->
+            <lightning-combobox required name="Title" label = "Title" value={value} 
+            placeholder="-Select-"  onchange={handleChange}> <!--options={titlePicklistValues.data.values}-->
+            </lightning-combobox>    
+        <!--<lightning-input-field field-name="Title" value={contact.Title}>
+            </lightning-input-field> value={contact.Title}-->
+        <lightning-input-field required field-name="FirstName" value={contact.FirstName}>
+            </lightning-input-field>   
+        <lightning-input-field required field-name="RequesteeFirstName"> <!--value={contact.RequesteeFirstName}-->
+            </lightning-input-field>
+        <lightning-input-field required field-name="RequesteeLastName"> <!--value={contact.RequesteeLastName}-->
+            </lightning-input-field>
+        <lightning-input type="tel" label="Requestee Mobile" value={contact.RequesteeMobile}>
+            </lightning-input>    <!--field-name="Mobile" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" pattern="/^(?:\+?61|0)4 ?(?:(?:[01] ?[0-9]|2 ?[0-57-9]|3 ?[1-9]|4 ?[7-9]|5 ?[018]) ?[0-9]|3 ?0 ?[0-5])(?: ?[0-9]){5}$/"-->
+        <lightning-input type="Email" name="Email" label="Requestee Email" value={contact.RequesteeEmail}>
+            </lightning-input>
+        <lightning-input type="tel" label="Requestee Landline" name="RequesteeLandline" value={contact.RequesteeLandline}>
+            </lightning-input>
+        <lightning-combobox required name="RequesteePreferredContactMethod" label = "Requestee Preferred Contact Method" value={contact.RequesteePreferredContactMethod} 
+                placeholder="-Select-" options="preferredContactMethodList">
+            </lightning-combobox>    
+    </lightning-record-edit-form>
+    </template>

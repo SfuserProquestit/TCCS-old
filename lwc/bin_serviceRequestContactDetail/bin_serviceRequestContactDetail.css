@@ -1,0 +1,12 @@
+.fieldRequired{
+    margin-left: 5px;
+    margin-top: -5px;
+    display:'';
+}
+.hideFieldRequired{
+   display:none;
+}
+
+.showForm{
+    display: block;
+}

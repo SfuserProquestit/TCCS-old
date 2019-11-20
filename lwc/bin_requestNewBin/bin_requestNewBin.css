@@ -1,0 +1,111 @@
+.container{
+    background-color: white;
+}
+.header{
+    display: flex;
+    background-color: #f8f9fa;
+    width: 100%;
+}
+.logos{
+    display: inline-table;
+    width:50%;
+    padding: 10px;
+}
+.actGovLogo{
+    margin-right: 10px;
+}
+.acLogo{
+    border-left: 1px solid #dddbda;
+    padding-left: 10px;
+}
+.headerContainer{
+    background-color: #aa4298;
+    display:inline-block; 
+    width:75%;
+    background:linear-gradient(to right,#f8f9fa 0,#ab4399 95%) !important
+
+}
+.headerTitle{
+    background: linear-gradient(to right,#482d8c 0,#ab4399 100%) !important;
+    transform: skewX(165deg);
+    color: white;
+    margin-right: 15px;
+    padding: 10px;
+    font-size: 1.6rem;
+    text-align: right;
+    height: 100%;
+}
+
+.requestBodyDesktop{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.stepDescriptionBlock{
+    margin-left: 15px;
+    display: table;
+    width: 100%;
+}
+
+.stepsNumber{
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    flex-shrink: 0;
+    position: relative;
+    background-color: #472d8c;
+    color: white;
+    font-weight: bold;
+    float: left;
+}
+
+.stepsNumberContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.stepDescription{
+    font-size: 1rem;
+    padding-left: 10px;
+    display: inline;
+    color:#404041;
+}
+
+.requestFooter{
+    display: block;
+    background: white;
+    padding: 10px;
+    text-align: right;
+}
+
+.slds-button_brand{
+    background-color: #472d8c !important;
+}
+
+.showContent{
+    display:'';
+}
+.hideContent{
+    display:none;
+}
+
+.reviewColor{
+    color:#aa4298;
+}
+
+.stepContentBox{
+    border: 1px solid #dddbda;
+    border-radius: 5px;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+.reviewRequestTitle{
+    color: rgb(170, 66, 152);
+    text-align: center;
+    display: block;
+    margin: 15px 0px;
+    font-weight: 400;
+}

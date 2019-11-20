@@ -1,0 +1,51 @@
+<template>
+    
+    <lightning-record-edit-form object-api-name="Case" record-id={recordId} onsuccess={handleSuccess} onsubmit={handleSubmit} density="comfy">
+    
+        <!-- Contact Title -->
+        <lightning-input-field disabled={reviewMode} required field-name="Contact_Title__c" ></lightning-input-field>
+        
+        <!-- Contact First Name -->
+        <lightning-input-field disabled={reviewMode} required field-name="Caller_First_Name__c" ></lightning-input-field>
+        
+        <!-- Contat Last Name -->
+        <lightning-input-field disabled={reviewMode} required field-name="Caller_Last_Name__c" ></lightning-input-field>
+        
+        <!-- Contact Email -->
+        <lightning-input-field disabled={reviewMode} field-name="Caller_Email__c" class={showEmailRequiredClass} ></lightning-input-field>
+        <div class={showEmailRequiredMsg} > Complete this field. </div>
+
+        <!-- Contact Mobile Phone -->
+        <lightning-input-field disabled={reviewMode} field-name="Caller_Primary_Phone__c" class={showMobileRequiredClass} ></lightning-input-field>
+        <div class={showMobileRequiredMsg} > Complete this field. </div>
+
+        
+        <!-- Contact Other Phone -->
+        <lightning-input-field disabled={reviewMode} field-name="Caller_Other_Phone__c" class={showOtherPhoneRequiredClass} ></lightning-input-field>
+        <div class={showOtherPhoneRequiredMsg} > Complete this field. </div>
+
+        <!-- Preferred Contact Method -->
+        <lightning-input-field disabled={reviewMode} required field-name="Preferred_Contact_Method__c" onchange={changePreferredContactMethod}></lightning-input-field>
+
+
+      
+        <template if:false={reviewMode}>
+            <div style="text-align: right; position: relative; top:65px;">
+    
+                <lightning-button   variant="brand" 
+                                    label="Previous" 
+                                    title="Previous"
+                                    class="slds-m-left_x-small"
+                                    onclick={clickPreviousButton}>
+                </lightning-button>
+                <lightning-button   variant="brand" 
+                                    type="submit" 
+                                    label="Next" 
+                                    title="Next"
+                                    class="slds-m-left_x-small">
+                </lightning-button>
+            </div>
+        </template>
+    
+    </lightning-record-edit-form>
+</template>

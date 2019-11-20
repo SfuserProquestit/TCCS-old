@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Check_you_SMS_title</fullName>
+        <categories>BIN</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Check your SMS title</shortDescription>
+        <value>Check your SMS</value>
+    </labels>
+    <labels>
+        <fullName>Check_your_SMS_message</fullName>
+        <categories>BIN</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Check your SMS message</shortDescription>
+        <value>We&apos;ve have sent a copy of your submission to your mobile number (##).
+
+If you didn&apos;t receive it please contact Access Canberra on XX XX XX..</value>
+    </labels>
+    <labels>
+        <fullName>Check_your_email_message</fullName>
+        <categories>BIN</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Check your email message</shortDescription>
+        <value>We&apos;ve have sent a copy of your submission to your email address (##).
+
+If you didn&apos;t receive it please contact Access Canberra on XX XX XX.</value>
+    </labels>
+    <labels>
+        <fullName>Check_your_email_title</fullName>
+        <categories>BIN</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Check your email title</shortDescription>
+        <value>Check your email</value>
+    </labels>
+    <labels>
+        <fullName>Request_New_Bin_Entitlements_Title</fullName>
+        <categories>BIN</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Request New Bin Entitlements Title</shortDescription>
+        <value>Based on the selected address you are entitled to the following:</value>
+    </labels>
+    <labels>
+        <fullName>Request_New_Bin_Page_Title</fullName>
+        <categories>BIN</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Request New Bin Page Title</shortDescription>
+        <value>Request New Bins</value>
+    </labels>
+    <labels>
+        <fullName>Request_New_Bin_Path_1</fullName>
+        <categories>BIN</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Request New Bin Path 1</shortDescription>
+        <value>Delivery Details</value>
+    </labels>
+    <labels>
+        <fullName>Request_New_Bin_Path_2</fullName>
+        <categories>BIN</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Request New Bin Path 2</shortDescription>
+        <value>Contact Details</value>
+    </labels>
+    <labels>
+        <fullName>Request_New_Bin_Path_3</fullName>
+        <categories>BIN</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Request New Bin Path 3</shortDescription>
+        <value>Review</value>
+    </labels>
+    <labels>
+        <fullName>Request_New_Bin_Path_4</fullName>
+        <categories>BIN</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Request New Bin Path 4</shortDescription>
+        <value>Submit</value>
+    </labels>
+    <labels>
+        <fullName>Request_New_Bin_Review_Title</fullName>
+        <categories>BIN</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Request New Bin Review Title</shortDescription>
+        <value>Review Request Details</value>
+    </labels>
+    <labels>
+        <fullName>Request_New_Bin_Step_1</fullName>
+        <categories>BIN</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Request New Bin Step 1</shortDescription>
+        <value>Deliver new set of bins to address:</value>
+    </labels>
+    <labels>
+        <fullName>Request_New_Bin_Step_2</fullName>
+        <categories>BIN</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Request New Bin Step 2</shortDescription>
+        <value>Deliver on date (optional):</value>
+    </labels>
+    <labels>
+        <fullName>Request_New_Bin_Step_3</fullName>
+        <categories>BIN</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Request New Bin Step 3</shortDescription>
+        <value>Your contact details:</value>
+    </labels>
+    <labels>
+        <fullName>Request_Received_Message</fullName>
+        <categories>BIN</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Request Received Message</shortDescription>
+        <value>Thank you, your submission has been received.</value>
+    </labels>
+    <labels>
+        <fullName>Request_Received_Title</fullName>
+        <categories>BIN</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Request Received Title</shortDescription>
+        <value>Request Received</value>
+    </labels>
+    <labels>
+        <fullName>Request_Reference_Code</fullName>
+        <categories>BIN</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Request Reference Code</shortDescription>
+        <value>Your reference Code is:</value>
+    </labels>
+    <labels>
+        <fullName>Service_Request_Form_Edit_Details_Button</fullName>
+        <categories>BIN</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Service Request Form Edit Details Button</shortDescription>
+        <value>Edit Details</value>
+    </labels>
+</CustomLabels>
